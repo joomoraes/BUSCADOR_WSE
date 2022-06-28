@@ -1,0 +1,26 @@
+﻿@model wsesearchmatogrosso.Models.WikiModel
+@{
+    ViewBag.Title = "_searchPartialModelWikiResult";
+}
+
+<span class="breadcrumbPesquisa">Você Está Pesquisando Por: <u style="font-weight: bold">@ViewBag.Pesquisa</u> no buscar da WSEMatoGrosso</span>
+<div id="resultDataLinksWiki">
+
+
+    @foreach (var item in Model.query.search.Where(x => x.title != null))
+    {
+        <p class="tituloPesquisaBr">
+            <div class="breakLine">
+                Titulo: @(item.title.Length > 50 ? item.title.Substring(0, 50) + "..." : item.title)&nbsp;&nbsp;&nbsp; Acessos: @item.wordcount
+                <br />
+                Descrição: @Html.Raw(item.snippet)
+                <br />
+                Horas: @item.timestamp
+            </div>
+            <br />
+        </p>
+        <p style="color: lawngreen">----------------------------------------------------------------------------</p>
+    }
+    
+</div>
+

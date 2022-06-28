@@ -1,0 +1,16 @@
+﻿@model wsesearchmatogrosso.Models.DuckDuckGoModel
+
+@{
+    ViewBag.Title = "_searchPartialModelResult";
+}
+
+<div id="resultDataLinks">
+  
+    @foreach (var item in Model.RelatedTopics.Where(x => x.Text != null))
+    {
+        <p>
+            @(item.Text.Length > 50 ? item.Text.Substring(0, 50) + "..." : item.Text)
+        </p>
+    }
+</div>
+

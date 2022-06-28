@@ -1,0 +1,6 @@
+﻿@model IEnumerable<wsesearchmatogrosso.Models.b3.EmpresasPregaoModel>
+
+@foreach (var item in Model)
+{
+    @Html.Raw("||") @Html.Raw("Empresa:") @item.nm_empresa @Html.Raw(" Segmento:") @Html.Raw(item.segmento) @Html.Raw("||") 
+}

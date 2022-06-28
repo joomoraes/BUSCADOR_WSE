@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>wsematogrosso</title>
+
+    <link rel="shortcut icon" href="~/images/logo.jpg">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <base href="<?php echo $urlserver; ?>">
+
+    <meta property="og:site_name" content="wsematogrosso">
+    <meta property="og:title" content="WSE Mato Grosso">
+    <meta property="og:description" content="Buscador">
+    <meta property="og:image" itemprop="image" content="https://URL \images\logo.jpg">
+    <meta property="og:type" content="website">
+
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+  
+    <div class="container body-content">
+        @RenderBody()
+        
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

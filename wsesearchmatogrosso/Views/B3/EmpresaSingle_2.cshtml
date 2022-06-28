@@ -1,0 +1,33 @@
+﻿@model wsesearchmatogrosso.Models.b3.EmpresasPregaoModel
+@{
+    ViewBag.Title = "EmpresaSingle_1";
+}
+
+<table class="table" style="background-color: white">
+    <thead>
+        <tr>
+            <th scope="col">Ação</th>
+            <th scope="col">Nome Empresa</th>
+            <th scope="col">Setor Economico</th>
+            <th scope="col">Subsetor</th>
+            <th scope="col">Segmento</th>
+            <th scope="col">Segmento B3</th>
+            <th scope="col">Nome Segmento</th>
+            <th scope="col">Cd Ação</th>
+            <th scope="col">CNPJ</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">@(Model.cd_acao_raiz ?? string.Empty)</th>
+            <td>@(Model.nm_empresa ?? string.Empty)</td>
+            <td>@(Model.setor_economico ?? string.Empty)</td>
+            <td>@(Model.subsetor ?? string.Empty)</td>
+            <td>@(Model.segmento ?? string.Empty)</td>
+            <td>@(Model.segmento_b3 ?? string.Empty)</td>
+            <td>@(Model.nm_segmento_b3 ?? string.Empty)</td>
+            <td>@(Model.cd_acao ?? string.Empty)</td>
+            <td>@(Model.vl_cnpj ?? string.Empty)</td>
+        </tr>
+    </tbody>
+</table>
